@@ -12,7 +12,7 @@ class NewListing extends Component {
         <h1 class="new-title">Create new post</h1>
         <div className="row">
           <div className="button-block">
-            <form onSubmit={} className="new-input">
+            <form className="new-input">
               <div className=" col-12">
                 <label for="title">Title</label>
                 <input name="title" class="long-input" id="title" type="text" placeholder="Beans and rice . . ." />
