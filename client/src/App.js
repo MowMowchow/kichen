@@ -5,7 +5,7 @@ import Listings from './components/listings/listings';
 import Home from './components/home/home';
 import NewListing from './components/new-listing/new-listing';
 import CartPage from './components/cart-page/cart-page';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 class App extends Component {

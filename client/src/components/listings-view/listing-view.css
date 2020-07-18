@@ -1,0 +1,91 @@
+@font-face{
+    font-family: Proxima-Nova-Bold;
+    src: url("Proxima Nova Bold.otf");
+  }
+  
+  @font-face{
+    font-family: Proxima-Nova;
+    src:url("ProximaNova-Regular.otf");
+  }
+  
+  html,body {overflow-x: hidden; 
+    }
+  
+  .listing-btn{
+    margin: 10px;
+    border-radius:0px;
+    border-style: none;
+    background-color: white;
+    width:22.5em;
+    transition:0.5s;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .listing-btn:hover{
+    transform: scale(1.005);
+    transition:0.5s;
+  }
+  
+  .listing-btn-image{
+    background-size: cover;
+    height:9em;
+    width:auto;
+    background-image: url('images/header-background.jpg');
+  
+    
+  }
+  .listing-btn-text{
+    line-height: 0.5em;
+    padding: 10px;
+    
+  }
+  
+  .main-info{
+    float:left;
+    line-height: 1em;
+  }
+  
+  .time-box{
+    border-left-style:solid;
+    border-left-width:0.05em;
+    border-left-color: #a8a8a8;
+    font-style:normal;
+    float:right;
+    
+    margin: auto;
+  }
+  
+  .time-text{
+    padding:0;
+    margin:0;
+  }
+  .profile-pic{
+    display: inline-block;
+    background-image: url('images/header-background.jpg');
+    background-size: cover;
+    height:2em;
+    width:2em;
+    align-content: center;
+    -webkit-clip-path: circle(50% at 50% 50%);
+  }
+  
+  .name{
+    float:left;
+    margin-top:5%;
+    margin-left:5%;
+    font-family: Proxima-Nova-Bold;
+    text-overflow: ellipsis;
+  }
+  .profile-pic{
+    float:left;
+  }
+  .user-info{
+    margin-bottom:4em;
+  }
+  
+  .title{
+    font-family: Proxima-Nova-Bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }

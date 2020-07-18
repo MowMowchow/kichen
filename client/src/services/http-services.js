@@ -7,6 +7,16 @@ class HttpServiceClass extends Component {
 
 	}
 
+	getItems = () => {
+		// http
+		var promise = new Promise((resolve, reject) => {
+			fetch('http://localhost:3001/getitem').then((res) => {
+				resolve(res.json());
+			});
+		});
+		return promise;
+	};
+
 
 	
 }
