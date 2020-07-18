@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 getConnection = async () => {
     const MONGODB_URI = 'mongodb+srv://Jason:sushila44@cluster0.iq2bk.mongodb.net/kichen-test?retryWrites=true&w=majority';
     try {
-        await mongoose.connect(MONGODB_URI || process.env.MONGODB_URL || 'mongodb://localhost/kichen-test', {
+        await mongoose.connect(MONGODB_URI || process.env.MONGODB_URL{
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
