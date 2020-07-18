@@ -1,0 +1,78 @@
+.new-title{
+    margin-top:1em;
+    font-size:2em;
+}
+.new-input label{
+    display:block !important;
+    margin-top:0.2em;
+}
+
+.new-input input{
+    border-radius:10px;
+    border-style:solid;
+    border-width: 1px;
+    padding-left:0.5em;
+}
+.new-input .long-input{
+    height:2.4em;
+    width:100%;
+}
+
+.new-input .short-input{
+    height:2.4em;
+    width:92%;
+}
+
+
+
+.new-input textarea{
+    height:5em;
+    width:100%;
+    border-radius:10px;
+    border-style:solid;
+    border-width: 1px;
+    padding-left:0.5em;
+}
+
+.new-input .input-group-prepend{
+    height:3em;
+    width:1vw;
+}
+
+.new-input .icon-group{
+    width:100%;
+}
+
+.button-storage{
+    margin:auto;
+    width:80vw;
+}
+
+.button-block{
+    
+    width:35em;
+}
+
+.move-row{
+    margin-left: 0%;
+}
+
+.new-input .submit-button{
+    height:100%;
+    color:white;
+    font-family: Proxima-Nova;
+    transition:0.2s;
+    background-color: #ffbf00 !important;
+    border-style:none !important;
+    border-radius:30px;
+    transition:0.2s;
+    padding-left:2em;
+    padding-right:2em;
+}
+
+
+.submit-button-div{
+    margin-top:1em;
+    align-content: right;
+    height:3em;
+}

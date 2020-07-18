@@ -1,0 +1,42 @@
+@font-face{
+    font-family: Proxima-Nova-Bold;
+    src: url("Proxima Nova Bold.otf");
+  }
+  
+.navbar {
+    
+    display: flex; 
+    min-height: 10vh;
+    background: rgb(0, 0, 0);
+    z-index: 4;
+    width:100vw;
+}
+
+
+.nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    
+}
+
+.navbar a{
+    color:white !important;
+    font-family: Proxima-Nova-Bold;
+    transition: 0.2s;
+}
+
+.navbar a:hover{
+    transform: scale(1.04);
+    font-family: Proxima-Nova-Bold;
+    text-decoration: none;
+    transition: 0.2s;
+
+}
+
+.navbar a:visited{
+    color:white !important;
+    font-family: Proxima-Nova-Bold;
+}
