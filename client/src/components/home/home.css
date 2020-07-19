@@ -47,12 +47,14 @@ body {overflow-x: hidden; }
   
 }
 
+
 #location-btn{
   background-color:#ffbf00;
   color:white;
   border-style: none;
-
+  height: 39px;
 }
+
 
 #location-btn:hover{
   background-color:#ffcb30;
@@ -65,11 +67,13 @@ body {overflow-x: hidden; }
   border-style: none;
 }
 
+
 .location-icon{
   background-color:white;
   border-style:none;
   border-radius: 0;
 }
+
 
 .slogan{
   color:white;
@@ -82,6 +86,8 @@ body {overflow-x: hidden; }
 .carousel-item{
     height:70vh;
 }
+
+
 .carosuel-text{
   margin: auto;
   padding:10em;
@@ -130,13 +136,15 @@ body {overflow-x: hidden; }
   transition:0.2s;
 }
 
+.order-btn-text{
+  font-size: 2.5rem;
+}
+
 .order-btn:hover{
   height:100%;
   margin-top:15vh;
   color:white;
   font-family: Proxima-Nova-Bold;
-  
- 
 }
 
 .home  .btn-primary{
@@ -204,6 +212,11 @@ transition:0.2s;
   font-family: Proxima-Nova;
   font-size:1em;
   line-height: 2em;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .footer .bi{

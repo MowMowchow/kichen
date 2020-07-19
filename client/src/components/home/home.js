@@ -98,9 +98,7 @@ class Home extends Component {
 
 						<div class="carousel-item active mission">
 							<div className="row">
-
 								<div className="col-6 mission-image-one" />
-
 								<div className="col-6 carosuel-text mission" align="center">
 									<h1 className="carosuel-header">Did You Know?</h1>
 									<p className="carosuel-desc">
@@ -113,11 +111,9 @@ class Home extends Component {
 
 						<div class="carousel-item mission">
 							<div className="row">
-
 								<div className="col-6 mission-image-two" />
-
 								<div className="col-6 carosuel-text" align="center">
-									<h1 className="carosuel-header" >Our Mission</h1>
+									<h1 className="carosuel-header">Our Mission</h1>
 									<p className="carosuel-desc">
 									Kichen is a marketplace where people can sell or give away their homemade foods. We aim to reduce household food-waste by allowing people to sell their excess meals to others.{' '}
 									</p>
@@ -202,24 +198,25 @@ class Home extends Component {
 				<div className="block" align="center">
 					<div className="row">
 						<div className="col order-btn">
-							<h2>Ready to order?</h2>
+							<h2 className="order-btn-text">Ready to order?</h2>
 
-							
+							<Link to="/listings">
 							<button href="#top" type="button" className="btn btn-primary btn-lg">
 								GET STARTED
 							</button>
-							
+							</Link>
 						</div>
 					</div>
 				</div>
+
 				<div className="footer">
 					<div className="row footer-row">
-						<div className="col-3" />
-						<div className="col-3">
+						<div className="col-3"/>
+						<div className="col-3 footer-text">
 							<h2>About Us</h2>
 							<h2>FAQ</h2>
 						</div>
-						<div className="col-3">
+						<div className="col-3 footer-text">
 							<h2>
 								<svg
 									width="1em"
@@ -255,7 +252,7 @@ class Home extends Component {
 								kichen@gmail.com
 							</h2>
 						</div>
-						<div className="col">
+						<div className="col-3">
 							<i className="fa fa-facebook-square" aria-hidden="true" />
 						</div>
 					</div>

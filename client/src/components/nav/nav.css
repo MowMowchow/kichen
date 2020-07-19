@@ -10,7 +10,7 @@
     background: #242220;
     z-index: 4;
     width:100vw;
-    padding: .1em .3em .1em 3em;
+    padding: .15em .3em .15em 3em;
 
     margin: 0;
 }
@@ -28,12 +28,12 @@
 .navbar a{
     color: #f5f3f0 !important;
     font-family: Proxima-Nova-Bold;
-    font-size: 1.35em;
+    font-size: 1.45em;
     transition: 0.2s;
 }
 
 .navbar a:hover{
-    transform: scale(1.15);
+    transform: scale(1.1);
     font-family: Proxima-Nova-Bold;
     text-decoration: none;
     transition: 0.33s;
