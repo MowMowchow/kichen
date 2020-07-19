@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './cart-item.css';
 import HttpServiceClass from '..//..//services/http-services';
 
 let HttpService = new HttpServiceClass();
