@@ -25,7 +25,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="home">
-				<div className="page-header header container-fluid" height="700px">
+				<div className="page-header header container-fluid" height="700px" name="top">
 					<div className="overlay">
 						<div className="row">
 							<div className="col-3">
@@ -201,9 +201,12 @@ class Home extends Component {
 					<div className="row">
 						<div className="col order-btn">
 							<h2>Ready to order?</h2>
+
+							<Link to="/#top">
 							<button type="button" className="btn btn-primary btn-lg">
 								GET STARTED
 							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
