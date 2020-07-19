@@ -8,7 +8,7 @@ var item = new Schema({
     location: String,
     ready_time: String,
     ingredients: String,
-    desciption: String,
+    description: String,
     imgUrl: String
 });
 

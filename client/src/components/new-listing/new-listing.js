@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import HttpServiceClass from '..//../services/http-services';
 import './new-listing.css';
-import {Link} from 'react-router-dom';
 
 let httpService = new HttpServiceClass();
 
@@ -93,7 +92,7 @@ class NewListing extends Component {
 
 
               <div className="col-6 submit-button-div justify-content-end">
-              <Link to="/listings"><button className="submit-button">Submit</button></Link>
+              <button className="submit-button">Submit</button>
               </div>
 
 
