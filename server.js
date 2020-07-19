@@ -98,5 +98,115 @@ app.post('/postitem', function(req, res){
 });
 
 
+app.post('/ifcart', function(req, res){
+    Cart.find({geoip:req.body.geoip}, function(err, carts){
+        console.log(req.body.geoip);
+        if (err) {
+            res.status(500).send({error: "could not fetch items"});   
+        } else {
+            res.send(carts);
+        }
+    });
+});
+
+
+app.post('/newcart', function(req, res){
+    var cart = new Cart();
+    cart.geoip = req.body.geoip;
+    cart.title = req.body.title;
+    cart.items = [];
+    
+    Cart.find({
+       geoip: cart.geoip
+        }, function(err, carts){
+            if (err){
+                res.status(500).send({error: "Could not fetch carts"});
+            } else {
+                if (!carts.length){
+                    called = true;
+                    cart.save(function(err, savedCart){
+                        if (err){
+                            res.status(500).send({error: "Could not upload cart"});
+                        } else {
+                            res.send(savedCart);
+                        }
+                    });
+                } else{
+                     console.log("skipping cart");
+                }
+            }
+        });     
+});
+
+
+app.put('/cartadditem', function(req, res){ // to add
+    Item.findOne({_id: req.body.itemId}, function(err, item){
+        if (err) {
+            res.status(500).send({error: 'Could not add item to cart'});
+        } else {
+            Cart.update({_id: req.body.cartId}, {$addToSet: {items: item._id}}, function(err, cart){
+                if (err) {
+                    res.status(500).send({error: 'Could not add item to cart'});
+                } else {
+                    res.send('added item to cart');                    
+                }
+            });
+        }
+    });
+});
+
+
+app.put('/getcart', function(req, res) { //to populate
+	Cart.find({geoip: req.body.geoip}).populate({ path: 'items', model: 'Item' }).exec(function(err, carts) {
+		if (err) {
+			res.status(500).send({ error: 'Could not fetch carts'});
+		} else {
+            console.log('populated carts');
+			res.status(200).send(carts);
+		}
+	});
+});
+
+
+app.put('/getcart', function(req, res) { //to view
+	Cart.find({geoip: req.body.geoip}, function(err, carts) {
+		if (err) {
+			res.status(500).send({error: 'Could not fetch carts'});
+		} else {
+            console.log('got carts');
+			res.status(200).send(carts);
+		}
+	});
+});
+
+
+app.del('/cartremove', function(req, res) {
+	Cart.deleteOne({ _id: req.body.cartId }, function(err, output) {
+		if (err) {
+			res.status(500).status({ error: 'Could not delete item' });
+		} else {
+			res.status(200).send('deleted item');
+		}
+	});
+});
+
+
+app.put('/cartremoveitem', function(req, res) {
+	Item.findOne({ _id: req.body.itemId }, function(err, item) {
+		if (err) {
+			res.status(500).send({ error: 'Could not remove items from cart' });
+		} else {
+			Cart.update({_id: req.body.cartId}, {$pull: { items: item._id }}, function(err, cart) {
+				if (err) {
+					res.status(500).send({error: 'Could not remove items from cart' });
+				} else {
+					res.send(cart);
+				}
+			});
+		}
+	});
+});
+
+
 
 app.listen(PORT, console.log('server hosted at {PORT}'));
