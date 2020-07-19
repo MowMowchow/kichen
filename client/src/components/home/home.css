@@ -73,7 +73,7 @@ body {overflow-x: hidden; }
 
 .slogan{
   color:white;
-  font-size:1.75em;
+  font-size:2em;
   font-family: Cocogoose;
   margin-top:35vh;
   font-weight: 600;
@@ -88,10 +88,15 @@ body {overflow-x: hidden; }
   text-align:left;
 }
 
+.carosuel-header {
+  font-size: 3rem;
+}
+
 .carosuel-desc{
   margin-left:0;
   text-align:left;
   float:left;
+  font-size: 1.2rem;
 
 }
 .carosuel-image{

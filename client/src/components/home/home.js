@@ -33,7 +33,7 @@ class Home extends Component {
 							</div>
 							<div className="col-6" align="center">
 			
-								<h2 className="slogan"> Find fresh homemade food near you</h2>
+								<h2 className="slogan"> Find Fresh Homemade Food Near You</h2>
 								<div id="location-field" className="input-group mb-3">
 									<div className="input-group-prepend">
 										<span className="input-group-text location-icon">
@@ -102,9 +102,9 @@ class Home extends Component {
 								<div className="col-6 mission-image-one" />
 
 								<div className="col-6 carosuel-text mission" align="center">
-									<h1>Did You Know?</h1>
+									<h1 className="carosuel-header">Did You Know?</h1>
 									<p className="carosuel-desc">
-									Last year, the American Journal of Agricultural Economics, found that the average U.S. household wasted almost one third of their food. {' '}
+									Last year, the American Journal of Agricultural Economics found that the average U.S. household wasted almost one third of their food. {' '}
 								</p>
 								</div>
 
@@ -117,9 +117,9 @@ class Home extends Component {
 								<div className="col-6 mission-image-two" />
 
 								<div className="col-6 carosuel-text" align="center">
-									<h1>Our Mission</h1>
+									<h1 className="carosuel-header" >Our Mission</h1>
 									<p className="carosuel-desc">
-									Kichen, is a marketplace where people can sell or give away their homemade foods. It aims to reduce food-waste by households by allowing people to sell their excess meals to others.{' '}
+									Kichen is a marketplace where people can sell or give away their homemade foods. We aim to reduce household food-waste by allowing people to sell their excess meals to others.{' '}
 									</p>
 								</div>
 
