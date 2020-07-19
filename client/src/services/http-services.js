@@ -1,21 +1,21 @@
 import 'whatwg-fetch';
 import { Component } from 'react';
-const url = "https://kichen-test.herokuapp.com";
-
+const url = 'https://kichen.herokuapp.com';
 
 class HttpServiceClass extends Component {
 	constructor(props) {
 		super(props);
-		
 		// binds
 		this.getItems = this.getItems.bind(this);
 		this.postItem = this.postItem.bind(this);
 		this.getIp = this.getIp.bind(this);
 		this.newCart = this.newCart.bind(this);
-
+		this.ifCart = this.ifCart.bind(this);
+		this.addToCart = this.addToCart.bind(this);
+		this.removeFromCart = this.removeFromCart.bind(this);
+		this.getCart = this.geCart.bind(this);
 	}
 
-	
 	getIp = () => { // not in use https://api.ipify.org?format=json
 		var promise = new Promise((resolve, reject) => {
 			fetch('https://api.ipify.org?format=json').then((res) => {
@@ -26,7 +26,6 @@ class HttpServiceClass extends Component {
 	};
 
 	getItems = () => {
-		// http
 		var promise = new Promise((resolve, reject) => {
 			fetch(url+ "/getitem").then((res) => {
 				resolve(res.json());
@@ -35,10 +34,9 @@ class HttpServiceClass extends Component {
 		return promise;
 	};
 
-	
 	postItem = (itemjson) => {
-		// http
-		fetch(url+ "/postitem", { //wadawdawd
+
+		fetch(url+ "/postitem", { 
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8'
@@ -48,7 +46,6 @@ class HttpServiceClass extends Component {
 		console.log('fetch done');
 	};
     
-
 
 	ifCart = (iptocheck) => {
         var temp = {geoip: iptocheck};
@@ -81,7 +78,6 @@ class HttpServiceClass extends Component {
     
 
     addToCart = (idsJson) => {
-		// http
 		fetch(url + "/cartadditem", {
 			method: 'PUT',
 			headers: {
@@ -94,7 +90,6 @@ class HttpServiceClass extends Component {
     
     
     removeFromCart = (idsJson) => {
-		// http
         console.log('removed item from cart', idsJson);
 		var promise = new Promise((resolve, reject) => {
 			fetch(url + "/cartremoveitem", {
@@ -128,7 +123,7 @@ class HttpServiceClass extends Component {
 		});
 		return promise;
 	};
-	
+
 }
 
 export default HttpServiceClass;

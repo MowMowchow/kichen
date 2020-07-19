@@ -76,7 +76,7 @@ class ListingView extends Component {
 								</p>
 								<div className="user-info">
 									<div className="profile-pic" />
-									<p className="name">John Doe</p>
+									<p className="name">John Smith</p>
 								</div>
 							</div>
 							<div className="col-4 time-box">

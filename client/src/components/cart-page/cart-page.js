@@ -79,11 +79,13 @@ class CartPage extends Component {
 							<h3 className="checkout-info">${((this.state.checkout_total)*.13).toFixed(2)}</h3>
 							<h3 className="checkout-info">${((this.state.checkout_total)*1.13).toFixed(2)}</h3>
 						</div>
-
-
 					</div>
 					
-					
+					<div className="row">
+						<div className="col-sm-12 checkout-btn-col">
+							<button className="checkout-button">Checkout</button>
+						</div>
+					</div>
 
 
 				</div>

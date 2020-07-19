@@ -7,7 +7,7 @@ function Nav() {
 
     <nav class="navbar navbar-expand-md ">
     <Link to= '/'>
-                <h3>Home</h3>
+                <h3 className="LOGO">Kichen</h3>
             </Link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation">
       <span class="navbar-toggler-icon"></span>

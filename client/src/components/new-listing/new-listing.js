@@ -50,7 +50,7 @@ class NewListing extends Component {
 
                 
 
-                    <input name="price" class="short-input" id="price" type="text" placeholder="0.00" />
+                    <input name="price" class="short-input" id="price" type="text" placeholder="0.00 (NUMBERS ONLY)" />
                     
                     
 
@@ -75,7 +75,7 @@ class NewListing extends Component {
 
                 <div className="col-4">
                   <label for="ready_time">Ready by:</label>
-                  <input name="ready_time" class="short-input" id="ready_time" type="text" placeholder="00:00" />
+                  <input name="ready_time" class="short-input" id="ready_time" type="text" placeholder="Date, 00:00" />
                 </div>
               </div>
 

@@ -2,6 +2,7 @@
     font-family: Proxima-Nova-Bold;
     src: url("Proxima Nova Bold.otf");
   }
+
   
 .navbar {
     
@@ -15,6 +16,9 @@
     margin: 0;
 }
 
+.LOGO {
+    padding-top: 7px;
+}
 
 .nav-links {
     width: 50%;

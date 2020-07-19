@@ -5,24 +5,22 @@ import HttpServiceClass from '..//..//services/http-services';
 
 let HttpService = new HttpServiceClass();
 
-
 class ItemModal extends Component {
-  constructor(props){
-    super(props);
-    this.state = {inCart: props.incart};
-  }
+	constructor(props) {
+		super(props);
+		this.state = { inCart: props.incart };
+	}
 
-
-  handleClick = (event) => {
-    var temp = {itemId: this.props.itemId, cartId: this.props.cartId};
-    if (this.state.inCart){
-      HttpService.removeFromCart(temp);
-      this.setState({inCart: false});
-    } else {
-      HttpService.addToCart(temp);
-      this.setState({inCart: true});
-    }
-  }
+	handleClick = (event) => {
+		var temp = { itemId: this.props.itemId, cartId: this.props.cartId };
+		if (this.state.inCart) {
+			HttpService.removeFromCart(temp);
+			this.setState({ inCart: false });
+		} else {
+			HttpService.addToCart(temp);
+			this.setState({ inCart: true });
+		}
+	};
 
 	render() {
 		if (!this.props.show) {
@@ -57,11 +55,11 @@ class ItemModal extends Component {
 
 														<div className="modal-user-info">
 															<div className="modal-profile-pic" />
-															<h2 className="modal-name">John Doe</h2>
+															<h2 className="modal-name">John Smith</h2>
 														</div>
 														<div className="product-info">
-															<h2>Price | 0.5km away</h2>
-															<h2>July 12th, 12:00pm </h2>
+															<h2>${this.props.item.price} | {this.props.item.location}</h2>
+															<h2>{this.props.item.ready_time}</h2>
 														</div>
 													</div>
 												</div>
@@ -69,21 +67,14 @@ class ItemModal extends Component {
 													<div className="col-6 desc">
 														<h1>Description</h1>
 														<p>
-															{' '}
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-															do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi ut aliquip ex ea commodo consequat.
+															{this.props.item.description}
+															
 														</p>
 													</div>
 													<div className="col-6 ingredients">
 														<h1>Ingredients</h1>
 														<p>
-															{' '}
-															Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-															do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi ut aliquip ex ea commodo consequat.
+															{this.props.item.ingredients}
 														</p>
 													</div>
 												</div>
@@ -91,10 +82,10 @@ class ItemModal extends Component {
 										</div>
 									</div>
 									<div className="modal-footer">
-                    <button className="addcart-btn" onClick={this.handleClick}>    
-                    {this.state.inCart ? 'Remove from Cart' : 'Add to Cart'}
-                    {console.log(this.props.item.title, this.state.inCart)}
-                    </button>
+										<button className="addcart-btn" onClick={this.handleClick}>
+											{this.state.inCart ? 'Remove from Cart' : 'Add to Cart'}
+											{console.log(this.props.item.title, this.state.inCart)}
+										</button>
 									</div>
 								</div>
 							</div>

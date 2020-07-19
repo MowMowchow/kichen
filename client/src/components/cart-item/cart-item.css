@@ -65,7 +65,7 @@
   }
   
   .cart-page .items-view{
-    margin-top:15vh;
+    margin-top: 2.8rem;
     
   }
   
@@ -117,3 +117,27 @@
   text-align: left;
 }
 
+.checkout-btn-col {
+  padding-top: 1.2rem;
+  align-items: center;
+  text-align: center;;
+  height: 4rem;
+}
+
+.checkout-button{
+  height:100%;
+  color:white;
+  font-family: Proxima-Nova;
+  transition:0.2s;
+  background-color: #ffbf00 !important;
+  border-style:none !important;
+  border-radius:30px;
+  transition:0.2s;
+  padding-left:2em;
+  padding-right:2em;
+}
+
+.checkout-button:hover {
+  transform: scale(1.05);
+  transition: 0.33s;
+}
