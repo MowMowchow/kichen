@@ -81,8 +81,7 @@ class ListingView extends Component {
 							</div>
 							<div className="col-4 time-box">
 								<div className="time-text">
-									<h4>Jul. 11th</h4>
-									<h4>9:00pm</h4>
+                  <h4>{this.props.item.ready_time}</h4>
 								</div>
 							</div>
 
