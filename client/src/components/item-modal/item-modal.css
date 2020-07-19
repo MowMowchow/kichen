@@ -1,0 +1,152 @@
+
+@font-face{
+  font-family: Proxima-Nova-Bold;
+  src: url("Proxima Nova Bold.otf");
+}
+
+@font-face{
+  font-family: Proxima-Nova;
+  src:url("ProximaNova-Regular.otf");
+}
+
+
+.item-page{
+  padding:2em;
+  background-color:white;
+  margin:auto;
+  width:50vw;
+  transition:0.2s;
+
+}
+
+.modal-lg h1{
+  font-size:2em !important;
+  font-family:Proxima-Nova-Bold !important;
+}
+
+.modal-lg h2{
+  font-size:1em !important;
+
+}
+.modal-lg p{
+  
+}
+
+.modal-lg{
+  display:block;
+  position: fixed;
+  right: 16vw;
+  bottom: 2vh;
+  width: 70vw !important;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 1200px) {
+  .item-page{
+    
+    background-color:white;
+    margin:auto;
+    width:90vw;
+    transition:0.2s;
+  }
+
+
+  .modal-dialog{
+    display:block;
+    position: fixed;
+    right:0px;
+    left:0px;
+    bottom: 5vh;
+    width: 98vw !important;
+    z-index: 2;
+  }
+
+  .modal-lg h1{
+    font-size:1.6em !important;
+    font-family:Proxima-Nova-Bold !important;
+  }
+  
+  .modal-lg h2{
+    font-size:0.8em !important;
+  
+  
+  }
+
+  .modal-lg p{
+    font-size:0.7em !important;
+    
+  }
+
+}
+
+html,body {
+  overflow-x: hidden;
+}
+
+
+.image {
+  background-size: cover;
+  width:auto;
+  background-image: url('images/header-background.jpg');
+}
+
+.addcart-btn{
+  width:100%;
+  background-color: #ffbf00;
+  font-size:2em;
+  font-family:Proxima-Nova-Bold;
+  border-style:none;
+  transition:0.3s;
+  
+}
+
+.addcart-btn:hover{
+  width:100%;
+  background-color: #ffcb30;
+  transform:scale(1.02);
+  font-size:2em;
+  font-family:Proxima-Nova-Bold;
+  border-style:none;
+  transition:0.3s;
+  
+}
+
+
+.modal-name{
+  padding-top: 0.5em;
+}
+.modal-profile-pic{
+  display: inline-block;
+  background-image: url('images/header-background.jpg');
+  background-size: cover;
+  height:2em;
+  width:2em;
+  align-content: center;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  float:left;
+  margin-right: 1em;
+  
+}
+
+.bottom-row{
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+.product-info{
+  margin-top: 2em;
+}
+
+.modal-overlay{
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+  padding: 50;
+  z-index: 1;
+};
+
