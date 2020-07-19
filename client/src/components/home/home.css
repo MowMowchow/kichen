@@ -1,219 +1,275 @@
 @font-face{
-    font-family: Cocogoose;
-    src: url('cocogoose-italics.ttf');
-  }
-  
-  @font-face{
-    font-family: Proxima-Nova;
-    src: url("Proxima Nova Bold.otf");
-  }
-  
+  font-family: Cocogoose;
+  src: url('cocogoose-italics.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: Proxima-Nova;
+  src: url("Proxima Nova Bold.otf");
+}
+
 body {overflow-x: hidden; }
-  
-  .home .header {
-    display: block;
-    position: relative;
-    background-image: url('images/header-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  
-  }
-  
-  .home .block  {
-    background-color: #ad244e;
-    vertical-align: center;
-    height: 50vh;
-    
-  
-  }
-  .overlay {
-    top:0px;
-    left:0px;
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  
-  #location-field{
-    width:80%;
-    justify-content: center;
-    margin-top:2vh;
-    
-  }
-  
-  #location-btn{
-    background-color:#ffbf00;
-    color:white;
-    border-style: none;
-  
-  }
-  
-  #location-btn:hover{
-    background-color:#ffcb30;
-    color:white;
-    border-style: none;
-  }
-  
-  
-  #location-input{
-    border-style: none;
-  }
-  
-  .location-icon{
-    background-color:white;
-    border-style:none;
-    border-radius: 0;
-  }
-  
-  .slogan{
-    color:white;
-    font-size:1.5em;
-    font-family: Cocogoose;
-    margin-top:35vh;
-  }
-  
-  .carousel-item{
-      height:70vh;
-  }
-  .carosuel-text{
-    margin: auto;
-    padding:10em;
-    text-align:left;
-  }
-  
-  .carosuel-desc{
-    margin-left:0;
-    text-align:left;
-    float:left;
 
-  }
-  .carosuel-image{
-    display: block;
-    float:right;
-    background-size:cover;
-    height: 70vh;
-    width:auto;
-    -webkit-clip-path: polygon(29% 0, 100% 0%, 100% 100%, 9% 100%);
-    background-image: url('images/slide1.jpg');
-  }
+.home .header {
+  display: block;
+  position: relative;
+  background-image: url('images/header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 
-  .one{
-    background-image: url('images/slide1.jpg');
-  }
+}
 
-  .two{
-    background-image: url('images/slide2.jpg');
-  }
+.home .block  {
+  background-color: #ad244e;
+  vertical-align: center;
+  height: 50vh;
+  
+
+}
+.overlay {
+  top:0px;
+  left:0px;
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+#location-field{
+  width:80%;
+  justify-content: center;
+  margin-top:2vh;
+  
+}
+
+#location-btn{
+  background-color:#ffbf00;
+  color:white;
+  border-style: none;
+
+}
+
+#location-btn:hover{
+  background-color:#ffcb30;
+  color:white;
+  border-style: none;
+}
+
+
+#location-input{
+  border-style: none;
+}
+
+.location-icon{
+  background-color:white;
+  border-style:none;
+  border-radius: 0;
+}
+
+.slogan{
+  color:white;
+  font-size:1.5em;
+  font-family: Cocogoose;
+  margin-top:35vh;
+}
+
+.carousel-item{
+    height:70vh;
+}
+.carosuel-text{
+  margin: auto;
+  padding:10em;
+  text-align:left;
+}
+
+.carosuel-desc{
+  margin-left:0;
+  text-align:left;
+  float:left;
+
+}
+.carosuel-image{
+  display: block;
+  float:right;
+  background-size:cover;
+  height: 70vh;
+  width:auto;
+  -webkit-clip-path: polygon(29% 0, 100% 0%, 100% 100%, 9% 100%);
+  background-image: url('images/slide1.jpg');
+}
+
+.one{
+  background-image: url('images/slide1.jpg');
+}
+
+.two{
+  background-image: url('images/slide2.jpg');
+}
 
 .three{
-    background-image: url('images/slide3.jpg');
-  }
+  background-image: url('images/slide3.jpg');
+}
 
-  
-  .order-btn{
-    height:100%;
-    margin-top:15vh;
-    color:white;
-    font-family: Proxima-Nova;
-    transition:0.2s;
-  }
-  
-  .order-btn:hover{
-    height:100%;
-    margin-top:15vh;
-    color:white;
-    font-family: Proxima-Nova;
-    
-   
-  }
 
-  .home  .btn-primary{
-  background-color: #ffbf00 !important;
-  border-style:none !important;
-  
+.order-btn{
+  height:100%;
+  margin-top:15vh;
+  color:white;
+  font-family: Proxima-Nova-Bold;
   transition:0.2s;
-  }
+}
 
-  .home  .btn-primary:hover{
-    transition:0.2s;
-    transform: scale(1.2);
-    background-color: #ffcb30!important;
-    border-style:none !important;
+.order-btn:hover{
+  height:100%;
+  margin-top:15vh;
+  color:white;
+  font-family: Proxima-Nova-Bold;
+  
+ 
+}
+
+.home  .btn-primary{
+background-color: #ffbf00 !important;
+border-style:none !important;
+
+transition:0.2s;
+}
+
+.home  .btn-primary:hover{
+  transition:0.2s;
+  transform: scale(1.2);
+  background-color: #ffcb30!important;
+  border-style:none !important;
+  }
+  
+
+  .home  h1{
+  
+  font-weight:bold;
+}
+
+
+.carosuel-text h1{
+  color:black;
+}
+
+.home  .logo{
+  color:white;
+  font-size:1.5em;
+  margin-top:1em;
+  margin-left:1em;
+
+  letter-spacing: 0.2em;
+
+}
+.home  .login-btn{
+  color:white;
+  text-align:right;
+
+  font-size:1.3em;
+  margin-top:1.2em;
+  margin-right:1em;
+
+  letter-spacing: 0.2em;
+}
+
+
+.footer{
+  background-color: #ad244e;
+  
+  vertical-align: center;
+  border-top: 5px solid white;
+  
+}
+
+
+.footer-row {
+  padding-top:7em;
+  padding-bottom:7em;
+}
+
+.footer h2{
+  color:white;
+  font-family: Proxima-Nova;
+  font-size:1em;
+  line-height: 2em;
+}
+
+.footer .bi{
+  margin-right:10px;
+}
+
+.carousel .carousel-indicators li{
+  background-color: rgba(200, 200,200, 0.25);
+
+}
+
+.carousel .carousel-indicators .active{
+  background-color:rgba(252, 186, 3, 1);
+}
+
+.mission {
+  background-color:#00473f;
+}
+
+.mission h1{
+  color:#ffbf00;
+  font-family:Proxima-Nova-Bold;
+  line-height:1em;
+}
+
+.mission p{
+  color:white;
+
+}
+
+.mission-image-one{
+  display: block;
+  float:right;
+  height: 50vh;
+  width:auto;
+  margin:auto;
+  margin-top:3em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('images/personeating.png');
+  
+}
+
+.mission-image-two{
+  display: block;
+  float:right;
+  height: 55vh;
+  width:auto;
+  margin:auto;
+  margin-top:3em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('images/foodwaste.png');
+}
+
+
+.mission .carosuel-desc{
+color:#82c4bb;
+
+}
+
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+  .carosuel-text{
+      margin: auto;
+      padding:4em;
+      text-align:left;
+    }
+
+    .mission {
+      background-color:#00473f;
     }
     
-  
-    .home  h1{
-    font-family: Proxima-Nova !important;
-  }
-  
-  
-  .carosuel-text h1{
-    color:black;
-  }
-  
-  .home  .logo{
-    color:white;
-    font-size:1.5em;
-    margin-top:1em;
-    margin-left:1em;
-  
-    letter-spacing: 0.2em;
-  
-  }
-  .home  .login-btn{
-    color:white;
-    text-align:right;
-  
-    font-size:1.3em;
-    margin-top:1.2em;
-    margin-right:1em;
-  
-    letter-spacing: 0.2em;
-  }
-  
-  
-  .footer{
-    background-color: #ad244e;
-    
-    vertical-align: center;
-    border-top: 5px solid white;
-    
-  }
-  
-  
-  .footer-row {
-    padding-top:7em;
-    padding-bottom:7em;
-  }
-  
-  .footer h2{
-    color:white;
-    font-family: Proxima-Nova;
-    font-size:1em;
-    line-height: 2em;
-  }
-  
-  .footer .bi{
-    margin-right:10px;
-  }
-  
-  .carousel .carousel-indicators li{
-    background-color: rgba(200, 200,200, 0.25);
-  
-  }
-  
-  .carousel .carousel-indicators .active{
-    background-color:rgba(252, 186, 3, 1);
-  }
-
-  @media only screen and (max-width: 700px) {
-    /* For mobile phones: */
-    .carosuel-text{
-        margin: auto;
-        padding:3em;
-        text-align:left;
-      }
-  }
+}
