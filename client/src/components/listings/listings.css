@@ -1,0 +1,26 @@
+.listing-page .name-div{
+    padding:2em;
+}
+.listing-page .name2{
+    display:none;
+    }
+
+@media only screen and (max-width: 950px) {
+
+.listing-page .name-div{
+display:none;
+
+}
+
+.listing-page .name2{
+    display:block;
+    text-align: center;
+    padding-bottom:0.5em;
+    }
+
+}
+
+.listing-block{
+    padding-top:3em;
+    
+}
