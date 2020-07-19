@@ -63,6 +63,39 @@ app.get('/getitem', function(req, res){
     });
 });
 
+app.post('/postitem', function(req, res){
+    var item = new Item();
+    item.title = req.body.title;
+    item.price = req.body.price;
+    item.servings = req.body.servings;
+    item.location = req.body.location;
+    item.ready_time = req.body.ready_time;
+    item.ingredients = req.body.ingredients;
+    item.description = req.body.description;
+    item.imgUrl = req.body.imgUrl;
+    Item.find({
+        title: item.title, 
+        price: item.price, 
+        location: item.location
+        }, function(err, items){
+            if (err){
+                res.status(500).send({error: "Could not fetch items"});
+            } else {
+                if (!items.length){
+                    called = true;
+                    item.save(function(err, savedItem){
+                        if (err){
+                            res.status(500).send({error: "Could not upload item"});
+                        } else {
+                            res.send(savedItem);
+                        }
+                    });
+                } else{
+                     console.log("skipping item");
+                }
+            }
+        });     
+});
 
 
 

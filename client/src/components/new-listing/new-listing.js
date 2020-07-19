@@ -5,6 +5,24 @@ let httpService = new HttpServiceClass();
 
 
 class NewListing extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+
+  handleSubmit(event) {
+    event.preventDefault();
+    var data = {};
+    const old = new FormData(event.target);
+    old.forEach(function (value, key) {
+      data[key] = value;
+    });
+    var json = JSON.stringify(data);
+    var obj = JSON.parse(json);
+    httpService.postItem(obj);
+  };
+
   render() {
     return (
 
@@ -12,7 +30,7 @@ class NewListing extends Component {
         <h1 class="new-title">Create new post</h1>
         <div className="row">
           <div className="button-block">
-            <form className="new-input">
+            <form onSubmit={this.handleSubmit} className="new-input">
               <div className=" col-12">
                 <label for="title">Title</label>
                 <input name="title" class="long-input" id="title" type="text" placeholder="Beans and rice . . ." />
