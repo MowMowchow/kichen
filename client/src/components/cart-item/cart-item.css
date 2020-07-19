@@ -11,9 +11,7 @@
   
   html,body {overflow-x: hidden; }
   
-  .cart-page{
-    width:100%;
-  }
+ 
   .cart-page .item-btn{
     margin:1em;
     border-radius:0px;
@@ -58,6 +56,7 @@
   }
   
   .cart-page .cart{
+    display: block;
     margin:auto;
     height: 50vh;
     width: 80%;
@@ -80,5 +79,41 @@
   margin:auto;
   height: 50vh;
   width: 80%;
+  background-color: #f5f5f5;
+  border-radius: 1.5%;
+}
+
+
+
+.cart-header {
+  font-size: 3.2rem;
+  text-align: center;
+  padding-right: 12.5rem;
+}
+
+.cart-page{
+  width:100%;
+  flex-wrap: wrap;
 
 }
+
+.info-view {
+  padding-bottom: 10rem;
+}
+
+
+.checkout-header {
+  display: block;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.checkout-info {
+  display: block;
+  padding-top: 0;
+  padding-left: 7rem;
+  text-align: left;
+}
+

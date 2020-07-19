@@ -13,6 +13,7 @@ class CartPage extends Component {
 			cart: [],
 			cartId: '',
 			rand: Math.random(),
+			checkout_total: 0
 		} // state is an object
 
 		// //binds
@@ -35,8 +36,14 @@ class CartPage extends Component {
             this.setState({cart: findata[0].items});
             this.setState({cartId: findata[0]._id});
             console.log(findata[0].items);
-        });
-      }
+		}).then((temp) => {
+		var temp_total = 0;
+		for (let i = 0; i < this.state.cart.length; i++){
+			temp_total += parseFloat(this.state.cart[i].price);
+		}
+		this.setState({checkout_total: temp_total});
+      });
+	};
 
 
 	cartList = () => {
@@ -49,16 +56,39 @@ class CartPage extends Component {
 
 	render() {
 		return (
-			<div class="row cart-page">
-				<div class="col-12 col-sm-12 col-m-8 col-lg-8 col-xlg-8 items-view ">  
-					<h2>Your Cart</h2>
+			<div className="container-fluid" id="cart-page-div">
+			<div className="row cart-page">
+				<div className="col-sm-12 col-md-8 items-view ">  
+					<h2 className="cart-header">Your Cart</h2>
 					<div class="cart">
 					{this.cartList()}
 					</div>
 				</div>
 
-				<div class="col-4 info-view" />
+				<div className="col-sm-12 col-md-4 info-view">
+					<h2 className="checkout-header">Checkout Info</h2>
+					<div className="row">
+						<div className="col-sm-6">
+							<h3 className="checkout-info">Subtotal</h3>
+							<h3 className="checkout-info">Tax (HST)</h3>
+							<h3 className="checkout-info">Your Total</h3>
+							
+						</div>
+						<div className="col-sm-6">
+							<h3 className="checkout-info">${this.state.checkout_total}</h3>
+							<h3 className="checkout-info">${((this.state.checkout_total)*.13).toFixed(2)}</h3>
+							<h3 className="checkout-info">${((this.state.checkout_total)*1.13).toFixed(2)}</h3>
+						</div>
+
+
+					</div>
+					
+					
+
+
+				</div>
 			</div>
+		</div>
 		);
 	}
 }
