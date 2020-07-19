@@ -11,7 +11,6 @@ class HttpServiceClass extends Component {
 		this.getItems = this.getItems.bind(this);
 		this.postItem = this.postItem.bind(this);
 		this.getIp = this.getIp.bind(this);
-		this.newCart = this.newCart.bind(this);
 	}
 
 	
