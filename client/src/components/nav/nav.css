@@ -6,10 +6,13 @@
 .navbar {
     
     display: flex; 
-    min-height: 10vh;
-    background: rgb(0, 0, 0);
+    min-height: 3vh;
+    background: #242220;
     z-index: 4;
     width:100vw;
+    padding: .1em .3em .1em 3em;
+
+    margin: 0;
 }
 
 
@@ -23,20 +26,21 @@
 }
 
 .navbar a{
-    color:white !important;
+    color: #f5f3f0 !important;
     font-family: Proxima-Nova-Bold;
+    font-size: 1.35em;
     transition: 0.2s;
 }
 
 .navbar a:hover{
-    transform: scale(1.04);
+    transform: scale(1.15);
     font-family: Proxima-Nova-Bold;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.33s;
 
 }
 
 .navbar a:visited{
-    color:white !important;
+    color: #f5f3f0 !important;
     font-family: Proxima-Nova-Bold;
 }

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 function Nav() {
   return (
 
-    <nav class="navbar navbar-expand-md navbar-fixed-top">
+    <nav class="navbar navbar-expand-md ">
     <Link to= '/'>
                 <h3>Home</h3>
             </Link>

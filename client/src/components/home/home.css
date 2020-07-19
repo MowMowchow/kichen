@@ -9,9 +9,7 @@
   font-family: Proxima-Nova;
   src: url("Proxima Nova Bold.otf");
 }
-html{
-  scroll-behavior: smooth;
-}
+
 body {overflow-x: hidden; }
 
 .home .header {
