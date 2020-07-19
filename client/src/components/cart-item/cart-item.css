@@ -1,0 +1,84 @@
+
+  @font-face{
+    font-family: Proxima-Nova-Bold;
+    src: url("Proxima Nova Bold.otf");
+  }
+  
+  @font-face{
+    font-family: Proxima-Nova;
+    src:url("ProximaNova-Regular.otf");
+  }
+  
+  html,body {overflow-x: hidden; }
+  
+  .cart-page{
+    width:100%;
+  }
+  .cart-page .item-btn{
+    margin:1em;
+    border-radius:0px;
+    border-style: none;
+    background-color: white;
+    font-family: Proxima-Nova;
+    width:95%;
+    
+    line-height:0.5em;
+  
+    
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close{
+    float:none;
+    margin-left:0.3em;
+    margin-top:0.2em;
+  }
+
+  .close:focus{
+    outline:none !important;
+  }
+
+  .cart-page .item-btn-image{
+    background-size: cover;
+    background-color:blue;
+    height:auto;
+    width:100%;
+    background-image: url('images/header-background.jpg');
+  
+    
+  }
+
+  .row{
+    flex-wrap: nowrap;
+  }
+  .cart-page .item-btn-text{
+    margin-top:1em;
+    margin-bottom:1em;
+    margin-left:0.5em;
+  }
+  
+  .cart-page .cart{
+    margin:auto;
+    height: 50vh;
+    width: 80%;
+    overflow-y: scroll;
+  
+  }
+  
+  .cart-page .items-view{
+    margin-top:15vh;
+    
+  }
+  
+  
+  .cart-page .items-view h2{
+    margin-left:8vw;
+  }
+
+
+.cart{
+  margin:auto;
+  height: 50vh;
+  width: 80%;
+
+}

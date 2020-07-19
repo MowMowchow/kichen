@@ -37,9 +37,20 @@ let HttpService = new HttpServiceClass();
 
   render() {
     return (
-      <div>
+      <div className="container-fluid h-100 listing-page">
+
+
+<div className="row">
+        <div className="col-lg-2 col-xlg-1 name-div">
         <h1>Listings</h1>
-        {this.itemList()}
+        </div>
+       
+        <div className="col-md-10 col-lg-10 col-xlg-11 listing-block">
+        <h1 class="name2" >Listings</h1>
+          {this.itemList()}
+          </div>
+          </div>
+          
       </div>
     );
   }

@@ -26,7 +26,7 @@
 
 
 .new-input textarea{
-    height:5em;
+    height:4em;
     width:100%;
     border-radius:10px;
     border-style:solid;
@@ -45,11 +45,12 @@
 
 .button-storage{
     margin:auto;
+    margin-left:5em;
     width:80vw;
 }
 
 .button-block{
-    
+    margin-left:0;
     width:35em;
 }
 
