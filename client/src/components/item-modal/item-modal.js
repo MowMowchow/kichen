@@ -9,12 +9,19 @@ let HttpService = new HttpServiceClass();
 class ItemModal extends Component {
   constructor(props){
     super(props);
+    this.state = {inCart: props.incart};
   }
 
 
   handleClick = (event) => {
     var temp = {itemId: this.props.itemId, cartId: this.props.cartId};
-
+    if (this.state.inCart){
+      HttpService.removeFromCart(temp);
+      this.setState({inCart: false});
+    } else {
+      HttpService.addToCart(temp);
+      this.setState({inCart: true});
+    }
   }
 
 	render() {
@@ -85,7 +92,8 @@ class ItemModal extends Component {
 									</div>
 									<div className="modal-footer">
                     <button className="addcart-btn" onClick={this.handleClick}>    
-                    Add to Cart
+                    {this.state.inCart ? 'Remove from Cart' : 'Add to Cart'}
+                    {console.log(this.props.item.title, this.state.inCart)}
                     </button>
 									</div>
 								</div>

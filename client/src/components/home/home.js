@@ -5,6 +5,21 @@ let HttpService = new HttpServiceClass();
 
 class Home extends Component {
 
+	async componentWillMount() {
+		const response = await fetch('https://api.ipify.org?format=json', {
+			method: 'GET'
+		});
+		const responseJson = await response.json();
+		const finalres = await HttpService.ifCart(responseJson.ip);
+		console.log(finalres);
+		if (finalres.length === 0) {
+			var temp = { geoip: responseJson.ip };
+			HttpService.newCart(temp);
+		} else {
+		}
+	}
+
+
 	render() {
 		return (
 			<div className="home">
@@ -12,7 +27,7 @@ class Home extends Component {
 					<div className="overlay">
 						<div className="row">
 							<div className="col-3">
-								<h1 className="logo">Logo</h1>
+								
 							</div>
 							<div className="col-6" align="center">
 								<h2 className="slogan"> Find fresh homemade food near you</h2>
@@ -59,10 +74,59 @@ class Home extends Component {
 								</div>
 							</div>
 							<div className="col-3">
-								<h1 className="login-btn">Login</h1>
+								
 							</div>
 						</div>
 					</div>
+				</div>
+
+
+				<div id="carouselMissionIndicators" className="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators mission">
+						
+					</ol>
+
+					<div class="carousel-inner">
+
+
+						<div class="carousel-item active mission">
+							<div className="row">
+
+								<div className="col-6 mission-image-one" />
+
+								<div className="col-6 carosuel-text mission" align="center">
+									<h1>Did You Know?</h1>
+									<p className="carosuel-desc">
+									Last year, the American Journal of Agricultural Economics, found that the average U.S. household wasted almost one third of their food. {' '}
+								</p>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="carousel-item mission">
+							<div className="row">
+
+								<div className="col-6 mission-image-two" />
+
+								<div className="col-6 carosuel-text" align="center">
+									<h1>Our Mission</h1>
+									<p className="carosuel-desc">
+									Kichen, is a marketplace where people can sell or give away their homemade foods. It aims to reduce food-waste by households by allowing people to sell their excess meals to others.{' '}
+									</p>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+
+					<a class="carousel-control-next" href="#carouselMissionIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+
 				</div>
 
 				<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
@@ -126,6 +190,8 @@ class Home extends Component {
 						</a>
 					</div>
 				</div>
+
+
 				<div className="block" align="center">
 					<div className="row">
 						<div className="col order-btn">
