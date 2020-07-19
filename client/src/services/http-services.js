@@ -13,7 +13,7 @@ class HttpServiceClass extends Component {
 		this.ifCart = this.ifCart.bind(this);
 		this.addToCart = this.addToCart.bind(this);
 		this.removeFromCart = this.removeFromCart.bind(this);
-		this.getCart = this.geCart.bind(this);
+		this.getCart = this.getCart.bind(this);
 	}
 
 	getIp = () => { // not in use https://api.ipify.org?format=json
