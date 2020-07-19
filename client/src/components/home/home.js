@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './home.css';
 import HttpServiceClass from '..//..//services/http-services';
+import {Link} from 'react-router-dom';
+
 let HttpService = new HttpServiceClass();
 
 class Home extends Component {
@@ -30,6 +32,7 @@ class Home extends Component {
 								
 							</div>
 							<div className="col-6" align="center">
+			
 								<h2 className="slogan"> Find fresh homemade food near you</h2>
 								<div id="location-field" className="input-group mb-3">
 									<div className="input-group-prepend">
@@ -58,6 +61,7 @@ class Home extends Component {
 										aria-describedby="basic-addon2"
 									/>
 									<div className="input-group-append">
+									<Link to="/listings">
 										<button id="location-btn" className="btn btn-outline-secondary" type="button">
 											<svg
 												width="1em"
@@ -70,6 +74,7 @@ class Home extends Component {
 												<path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
 											</svg>
 										</button>
+										</Link>
 									</div>
 								</div>
 							</div>
