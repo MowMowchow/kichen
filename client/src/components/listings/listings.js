@@ -40,8 +40,8 @@ let HttpService = new HttpServiceClass();
       <div className="container-fluid h-100 listing-page">
 
 
-<div className="row">
-        <div className="col-lg-2 col-xlg-1 name-div">
+        <div className="row">
+        <div className="col-lg-2 col-xlg-1 left-col">
         <h1>Listings</h1>
         </div>
        

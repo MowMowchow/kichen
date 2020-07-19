@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import HttpServiceClass from '..//../services/http-services';
 import './new-listing.css';
+import {Link} from 'react-router-dom';
+
 let httpService = new HttpServiceClass();
 
 
@@ -27,7 +29,8 @@ class NewListing extends Component {
     return (
 
       <div className="button-storage">
-        <h1 class="new-title">Create new post</h1>
+        <h1 className="new-title">Create new post</h1>
+        <h4 className="sub-title">(please be sure to fill in all the areas)</h4>
         <div className="row">
           <div className="button-block">
             <form onSubmit={this.handleSubmit} className="new-input">
@@ -90,7 +93,7 @@ class NewListing extends Component {
 
 
               <div className="col-6 submit-button-div justify-content-end">
-                <button className="submit-button">Submit</button>
+              <Link to="/listings"><button className="submit-button">Submit</button></Link>
               </div>
 
 

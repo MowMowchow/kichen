@@ -1,3 +1,7 @@
+.button-storage {
+    padding: 1rem;
+}
+
 .new-title{
     margin-top:1em;
     font-size:2em;
@@ -71,9 +75,18 @@
     padding-right:2em;
 }
 
+.submit-button:hover {
+    transform: scale(1.075);
+    transition: 0.33s;
+}
+
 
 .submit-button-div{
     margin-top:1em;
     align-content: right;
     height:3em;
+}
+
+.sub-title {
+    font-size: 1rem;
 }
