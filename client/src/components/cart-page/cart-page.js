@@ -26,7 +26,6 @@ class CartPage extends Component {
 	refresher = () => {
 		console.log('randnum: ', this.state.rand);
 		this.loadData();
-		console.log("AWDGHIAWUDHWUADHIAUWDHUIWA", this.state.rand);
 	}
 
 
