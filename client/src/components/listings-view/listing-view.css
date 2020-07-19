@@ -1,91 +1,162 @@
 @font-face{
-    font-family: Proxima-Nova-Bold;
-    src: url("Proxima Nova Bold.otf");
-  }
+  font-family: Proxima-Nova-Bold;
+  src: url("Proxima Nova Bold.otf");
+}
+
+@font-face{
+  font-family: Proxima-Nova;
+  src:url("ProximaNova-Regular.otf");
+}
+
+.listing-btn{
+  margin-right: 3em;
+  margin-bottom:1em;
+  border-radius:0px;
+  border-style: none;
+  background-color: white;
+  width:50em;
+ 
+  float: right;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.listing-btn-image{
+  display:none;
+
+}
+
+.listing-btn-image-bigscreen{
+  background-size: cover;
   
-  @font-face{
-    font-family: Proxima-Nova;
-    src:url("ProximaNova-Regular.otf");
-  }
+      height:9em;
+      width:20vw;
+      background-image: url('images/header-background.jpg');
+}
+
+
+.main-info{
+  padding-top:1em;
+  padding-left:2em;
+}
+.time-box{
+  border-left-style:solid;
+  border-left-width:0.05em;
+  border-left-color: #a8a8a8;
+  font-style:normal;
+  float:center;
   
-  html,body {overflow-x: hidden; 
-    }
+  padding-left:10%;
+  padding-top:2.3em;
+  margin-right:auto;
+
+}
+
+.profile-pic{
+  display: inline-block;
+  background-image: url('images/header-background.jpg');
+  background-size: cover;
+  height:2em;
+  width:2em;
+  align-content: center;
+  float:left;
+  -webkit-clip-path: circle(50% at 50% 50%);
+}
+
+.name{
+  float:left;
+  margin-top:0.3em;
+  margin-left:5%;
+  font-family: Proxima-Nova-Bold;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 850px){
+html,body {overflow-x: hidden; 
+  }
+
+  .listing-btn-image-bigscreen{
+    display:none;
+  }
+.listing-btn{
+  margin: auto;
+  float:none;
+  margin-bottom:1em;
+  border-radius:0px;
+  border-style: none;
+  background-color: white;
+  width:22.5em;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.listing-btn:hover{
+  transform: scale(1.005);
+  transition:0.5s;
+}
+
+.listing-btn-image{
+  background-size: cover;
+  height:9em;
+  width:auto;
+  display:flex;
+  background-image: url('images/header-background.jpg');
+
   
-  .listing-btn{
-    margin: 10px;
-    border-radius:0px;
-    border-style: none;
-    background-color: white;
-    width:22.5em;
-    transition:0.5s;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
-  }
+}
+.listing-btn-text{
+  line-height: 0.5em;
+  padding: 10px;
   
-  .listing-btn:hover{
-    transform: scale(1.005);
-    transition:0.5s;
-  }
+}
+
+.main-info{
+  float:left;
+  line-height: 1em;
+}
+
+.time-box{
+  border-left-style:solid;
+  border-left-width:0.05em;
+  border-left-color: #a8a8a8;
+  font-style:normal;
+  padding-left:1.2em;
+  padding-top:0;
+  float:right;
   
-  .listing-btn-image{
-    background-size: cover;
-    height:9em;
-    width:auto;
-    background-image: url('images/header-background.jpg');
-  
-    
-  }
-  .listing-btn-text{
-    line-height: 0.5em;
-    padding: 10px;
-    
-  }
-  
-  .main-info{
-    float:left;
-    line-height: 1em;
-  }
-  
-  .time-box{
-    border-left-style:solid;
-    border-left-width:0.05em;
-    border-left-color: #a8a8a8;
-    font-style:normal;
-    float:right;
-    
-    margin: auto;
-  }
-  
-  .time-text{
-    padding:0;
-    margin:0;
-  }
-  .profile-pic{
-    display: inline-block;
-    background-image: url('images/header-background.jpg');
-    background-size: cover;
-    height:2em;
-    width:2em;
-    align-content: center;
-    -webkit-clip-path: circle(50% at 50% 50%);
-  }
-  
-  .name{
-    float:left;
-    margin-top:5%;
-    margin-left:5%;
-    font-family: Proxima-Nova-Bold;
-    text-overflow: ellipsis;
-  }
-  .profile-pic{
-    float:left;
-  }
-  .user-info{
-    margin-bottom:4em;
-  }
-  
-  .title{
-    font-family: Proxima-Nova-Bold;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
+  margin: auto;
+}
+
+.time-text{
+  padding:0;
+  margin:0;
+}
+.profile-pic{
+  display: inline-block;
+  background-image: url('images/header-background.jpg');
+  background-size: cover;
+  height:2em;
+  width:2em;
+  align-content: center;
+  -webkit-clip-path: circle(50% at 50% 50%);
+}
+
+.name{
+  float:left;
+  margin-top:5%;
+  margin-left:5%;
+  font-family: Proxima-Nova-Bold;
+  text-overflow: ellipsis;
+}
+.profile-pic{
+  float:left;
+}
+.user-info{
+  margin-bottom:4em;
+}
+
+.title{
+  font-family: Proxima-Nova-Bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+}
