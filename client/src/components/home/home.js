@@ -60,8 +60,9 @@ class Home extends Component {
 										aria-label="Recipient's username"
 										aria-describedby="basic-addon2"
 									/>
-									<div className="input-group-append">
 									<Link to="/listings">
+									<div className="input-group-append">
+									
 										<button id="location-btn" className="btn btn-outline-secondary" type="button">
 											<svg
 												width="1em"
@@ -74,8 +75,9 @@ class Home extends Component {
 												<path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
 											</svg>
 										</button>
-										</Link>
+										
 									</div>
+									</Link>
 								</div>
 							</div>
 							<div className="col-3">
@@ -202,11 +204,11 @@ class Home extends Component {
 						<div className="col order-btn">
 							<h2>Ready to order?</h2>
 
-							<Link to="/#top">
-							<button type="button" className="btn btn-primary btn-lg">
+							
+							<button href="#top" type="button" className="btn btn-primary btn-lg">
 								GET STARTED
 							</button>
-							</Link>
+							
 						</div>
 					</div>
 				</div>
